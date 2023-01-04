@@ -34,4 +34,5 @@ before-build = [
     "git submodule update --init --force --recursive --depth=1",
     "make pip",
     "choco install pkgconfiglite",
+    "cd {project}\\src\\ext\\uchardet\\ && mkdir build && cd build && cmake .. && make && make install",
 ]
