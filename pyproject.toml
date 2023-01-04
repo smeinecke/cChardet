@@ -34,5 +34,5 @@ before-build = [
     "git submodule update --init --force --recursive --depth=1",
     "make pip",
     "choco install pkgconfiglite",
-    'cd {project}\\src\\ext\\uchardet\\ && mkdir build && dir && cd build && cmake .. -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="" \ && dir && make && make install',
+    'cd {project}\\src\\ext\\uchardet\\ && mkdir build && dir && cd build && cmake .. -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="" && dir && make && make install',
 ]
