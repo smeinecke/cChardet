@@ -32,5 +32,6 @@ before-build = [
 before-build = [
     "git submodule sync --recursive",
     "git submodule update --init --force --recursive --depth=1",
-    "make pip"
+    "make pip",
+    "pip install pkgconfig setuptools wheel",
 ]
