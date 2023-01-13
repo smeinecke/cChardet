@@ -33,10 +33,7 @@ before-build = [
     "git submodule sync --recursive",
     "git submodule update --init --force --recursive --depth=1",
     "make pip",
-#    "choco install pkgconfiglite",
-    'vcpkg install pkgconf:x64-windows',
-    'vcpkg install vcpkg-pkgconfig-get-modules:x64-windows',
-    'pip install pkgconfig',
+    "choco install pkgconfiglite",
     'cd {project}\\src\\ext\\uchardet\\ && mkdir build && cd build && cmake .. -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release && make && make install',
 ]
 
