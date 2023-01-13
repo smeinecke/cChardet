@@ -29,7 +29,6 @@ before-build = [
 ]
 
 [tool.cibuildwheel.windows]
-environment = {INCLUDE_PATH="/include/uchardet/", LIBRARY_PATH="/lib"}
 before-build = [
     "git submodule sync --recursive",
     "git submodule update --init --force --recursive --depth=1",
@@ -37,3 +36,6 @@ before-build = [
     "choco install pkgconfiglite",
     'cd {project}\\src\\ext\\uchardet\\ && mkdir build && cd build && cmake .. -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="" && make && make install',
 ]
+[tool.cibuildwheel.windows.environment]
+INCLUDE_PATH="C:\\Program Files (x86)\\uchardet\\include\\uchardet\\"
+LIBRARY_PATH="C:\\Program Files (x86)\\uchardet\\lib\\"
