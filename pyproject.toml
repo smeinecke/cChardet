@@ -35,6 +35,7 @@ before-build = [
     "make pip",
 #    "choco install pkgconfiglite",
     'vcpkg install pkgconf:x64-windows',
+    'vcpkg install vcpkg-pkgconfig-get-modules:x64-windows',
     'cd {project}\\src\\ext\\uchardet\\ && mkdir build && cd build && cmake .. -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release && make && make install',
 ]
 
