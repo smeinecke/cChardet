@@ -41,7 +41,3 @@ before-build = [
 [tool.cibuildwheel.windows.environment]
 INCLUDE_PATH='C:/Program Files (x86)/uchardet/include/uchardet/'
 LIBRARY_PATH='C:/Program Files (x86)/uchardet/lib/'
-vcpkgVersion= "2020.06.15"
-vcpkgInstallParamPath= '$(Build.SourcesDirectory)\\.azure-pipelines\\vcpkg'
-vcpkgBinariesPath= 'C:\\Users\\VssAdministrator\\AppData\\Local\\vcpkg\\archives'
-"vcpkg.arch"= 'x64'
