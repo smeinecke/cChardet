@@ -7,6 +7,7 @@ import glob
 import codecs
 import re
 import pkgconfig
+import platform
 from distutils.command.build_ext import build_ext
 from distutils import sysconfig
 
@@ -20,6 +21,8 @@ from Cython.Build import cythonize
 cchardet_dir = os.path.join("src", "cchardet") + os.path.sep
 
 try:
+    if platform.system() == "Windows":
+        raise pkgconfig.PackageNotFoundError
     ext_args = pkgconfig.parse('uchardet')
 except pkgconfig.PackageNotFoundError:
     include_path = os.environ.get('INCLUDE_PATH')
