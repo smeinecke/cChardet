@@ -21,8 +21,6 @@ from Cython.Build import cythonize
 cchardet_dir = os.path.join("src", "cchardet") + os.path.sep
 
 try:
-    if platform.system() == "Windows":
-        raise pkgconfig.PackageNotFoundError
     ext_args = pkgconfig.parse('uchardet')
 except pkgconfig.PackageNotFoundError:
     include_path = os.environ.get('INCLUDE_PATH')
