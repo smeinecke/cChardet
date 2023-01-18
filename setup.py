@@ -7,7 +7,6 @@ import glob
 import codecs
 import re
 import pkgconfig
-import platform
 from distutils.command.build_ext import build_ext
 from distutils import sysconfig
 
@@ -47,6 +46,7 @@ cchardet_module = Extension(
         os.path.join('src', 'cchardet', '_cchardet.pyx')
     ],
     language='c++',
+    extra_compile_args=['/d2FH4-'] if sys.platform == 'win32' else [],
     **ext_args
 )
 
