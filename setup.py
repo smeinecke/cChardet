@@ -97,5 +97,7 @@ setup(
     scripts=['bin/cchardetect'],
     ext_modules=cythonize([
         cchardet_module,
-    ]),
+    ],
+        compiler_directives={'language_level' : "3"},
+    ),
 )
