@@ -11,6 +11,7 @@ on:
     types: [created]
     branches:
       - 'master'
+  workflow_dispatch:      
 
 jobs:
   build_wheels:
