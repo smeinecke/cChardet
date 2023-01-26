@@ -34,7 +34,7 @@ before-build = [
     "git submodule update --init --force --recursive --depth=1",
     "make pip",
     "choco install pkgconfiglite",
-    'cd {project}\\src\\ext\\uchardet\\ && mkdir build && cd build && cmake .. -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=ON && make && make install',
+    'cd {project}\\src\\ext\\uchardet\\ && mkdir build && cd build && cmake .. -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=ON && make && make install',
 ]
 
 [tool.cibuildwheel.windows.environment]
