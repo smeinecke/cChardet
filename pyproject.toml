@@ -35,6 +35,7 @@ before-build = [
     "make pip",
     "choco install pkgconfiglite",
     'cd {project}\\src\\ext\\uchardet\\ && mkdir build && cd build && cmake .. -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=ON && make && make install',
+    'copy "C:\\Program Files (x86)\\uchardet\\lib\\libuchardet.a" "C:\\Program Files (x86)\\uchardet\\lib\\uchardet.lib"'
 ]
 
 [tool.cibuildwheel.windows.environment]
